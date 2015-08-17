@@ -56,7 +56,7 @@ class mongodb::repo (
             }
           }
         }
-      } else {
+      }else{
         $location = $::operatingsystem ? {
           'Debian' => 'http://downloads-distro.mongodb.org/repo/debian-sysvinit',
           'Ubuntu' => 'http://downloads-distro.mongodb.org/repo/ubuntu-upstart',
