@@ -16,6 +16,7 @@ class mongodb::repo::apt inherits mongodb::repo {
     }
 
     Apt::Source['mongodb']->Package<|tag == 'mongodb'|>
+    Exec[apt_update]->Package<|tag == 'mongodb'|>
   }
   else {
     apt::source { 'mongodb':
